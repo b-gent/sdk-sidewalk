@@ -17,9 +17,11 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'nRF Connect SDK - Amazon Sidewalk'
-copyright = '2024, Nordic Semiconductor'
+project = 'Amazon Sidewalk add-on for nRF Connect SDK'
+copyright = '2025, Nordic Semiconductor'
 author = 'Nordic Semiconductor'
+release = '1.0.1'
+version = '1.0.1'
 
 # -- General configuration ---------------------------------------------------
 
@@ -53,12 +55,23 @@ exclude_patterns = ["venv"]
 #
 html_theme = 'sphinx_ncs_theme'
 
+html_theme_options = {
+    'docsets': {},
+    "ncs_url": "https://nrfconnectdocs.nordicsemi.com/ncs/latest/nrf/",
+    "ncs_label": "nRF Connect SDK Docs",
+    "addons_url": "https://nrfconnect.github.io/ncs-app-index/",
+    "bare_metal_url": "",
+    "logo_url": "https://docs.nordicsemi.com",
+}
+
+html_show_sphinx = False
+html_extra_path = ['versions.json']
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-plantuml = 'java -jar /usr/local/bin/plantuml.jar'
 
 rst_epilog = """
 .. include:: /links.rst
