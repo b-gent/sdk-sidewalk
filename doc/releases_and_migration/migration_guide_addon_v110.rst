@@ -41,6 +41,7 @@ Update your west configuration to use the latest Add-on version:
 Initialize new fields in your ``sid_config`` structure to NULL for better code safety:
 
 .. code-block:: c
+
    struct sid_config config = {
        .link_mask = persistent_link_mask,
        .dev_ch = dev_ch,
@@ -111,7 +112,7 @@ For applications that only need BLE transport:
 * **Transport**: BLE only
 
 **SX1262 Configuration (Full Libraries with LoRa/FSK)**
-======================================================
+=======================================================
 
 For applications requiring LoRa and FSK transport with SX1262 radio:
 
@@ -141,7 +142,7 @@ For applications requiring LoRa/FSK transport with LR1110 radio:
 * **Radio**: LR1110 LoRa transceiver
 
 **Library Comparison Summary:**
-==============================
+===============================
 
 +------------------+------------------+------------------+
 | Configuration    | BLE Libraries    | SubGHz Libraries |
@@ -159,7 +160,7 @@ API Changes for Developers
 This section details the significant API changes between Sidewalk SDK v1.18 and v1.19 that developers need to be aware of when integrating the new version.
 
 **Enhanced Configuration Structure**
-===================================
+====================================
 
 The ``sid_config`` structure has been enhanced with new optional fields:
 
@@ -177,7 +178,7 @@ The ``sid_config`` structure has been enhanced with new optional fields:
 **File Path:** ``sidewalk/subsys/sal/common/sid_ifc/sid_time_sync_config.h``
 
 **New Configuration Options**
-============================
+=============================
 
 Two new options have been added to the ``sid_option`` enum:
 
@@ -207,7 +208,7 @@ New control event types have been added:
 * ``SID_CONTROL_EVENT_DL_ROUTE_VALIDITY_CONFIG_UPDATE = 3`` - DL route validity configuration changes
 
 **New Gateway Discovery Policies**
-=================================
+==================================
 
 Enhanced gateway discovery options for FSK (Link Type 2):
 
@@ -221,7 +222,7 @@ Enhanced gateway discovery options for FSK (Link Type 2):
 * ``SID_LINK_TYPE_2_GW_DISCOVERY_POLICY_CUSTOM = 4``
 
 **Backward Compatibility**
-=========================
+==========================
 
 **API Compatibility:**
 

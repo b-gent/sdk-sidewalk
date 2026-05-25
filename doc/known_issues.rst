@@ -51,8 +51,7 @@ KRKNWK-20863: Increased boot time due to bootloader configuration
   **Technical Details:** 
   - **Commit:** `99ed5147cb7543c1f8f9a116da801d3909a92e83` - "use rsa keys for all SoCs"
   - **Change:** Sets default config of `BOOT_SIGNATURE_TYPE` to `BOOT_SIGNATURE_TYPE_RSA`
-  - **Impact:** RSA signature verification is computationally more expensive than the previous default,
-    causing increased boot time across all platforms
+  - **Impact:** RSA signature verification is computationally more expensive than the previous default, causing increased boot time across all platforms
   
   **Note:** This issue is not related to specific radio configurations (LoRa, BLE, etc.) but affects
   the general boot process on all platforms.
